@@ -27,7 +27,7 @@ This theme draws inspiration from the work of [neomodern](https://github.com/cdm
 ## Preview
 
 ### Headings / Text / Code Blocks
-![Headings / Code Blocks](.assets/screenshot_1.png)
+![Headings / Code Blocks](./assets/screenshot_1.png)
 
 ### Callout / Tables
 ![Callouts Part 1](./assets/screenshot_2.png)
