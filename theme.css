@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Intel One Mono';
-	src: url('./fonts/IntelOneMono-Regular.woff2') format('woff2');
+	src: url('assets/fonts/IntelOneMono-Regular.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
