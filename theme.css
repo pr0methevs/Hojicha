@@ -1,14 +1,4 @@
-@font-face {
-	font-family: 'Intel One Mono';
-	src: url('assets/fonts/IntelOneMono-Regular.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
 .theme-dark {
-
-	--font-family-editor: "Intel One Mono", monospace;
 
 	--text: #adacac;
 	--text-faint: #696969;
@@ -16,15 +6,17 @@
 
 	/* dark gray */
 	--bg: #161616;
+
 	/* medium gray */
 	--bg-light-accent: #1b1c1d;
+
 	/* light gray */
 	--bg-hard-accent: #333333;
 
 	/* black */
 	--bg-black: #111111;
 
-	--border: #8a968f7a;
+	/* --border: #8a968f7a; */
 
 	/* --yellow: #b0b58a; */
 	--yellow: #c99b53;
@@ -57,11 +49,14 @@
 	--violet: #939bd5;
 	--violet-rgba: rgba(147, 155, 213, 0.4);
 
-	--h1: var(--yellow);
-	--h2: var(--blue);
-	--h3: var(--red);
-	--h4: var(--green);
-	--h5: var(--orange);
+	--border: var(--faded-green);
+	--border: var(--orange-rgba);
+
+	--h1: var(--green);
+	--h2: var(--yellow);
+	--h3: var(--orange);
+	--h4: var(--red);
+	--h5: var(--blue);
 	--h6: var(--violet);
 
 	--text-a: var(--violet);
@@ -70,6 +65,7 @@
 	--pre-code: var(--bg-black);
 	--interactive-accent: var(--faded-green);
 
+	/* --background-modifier-border: var(--border); */
 	--background-modifier-border: var(--border);
 	--blockquote-border: red;
 
@@ -87,6 +83,9 @@
 	--code-value: #8a879c;
 }
 
+.workspace-sidedock-vault-profile{ 
+	background-color: var(--bg-light-accent) !important;
+}
 /* -------------- */
 /*    CODE BLOCK  */
 /* -------------- */
@@ -134,11 +133,10 @@ pre code {
 }
 
 .markdown-preview-view pre code {
-	background-color: var(--bg-light-accent);
+	background-color: var(--bg) !important;
 	color: var(--text);
 	border-radius: 8px;
 	padding: 1em;
-	/* font-family: var(--font-family-editor), 'JetBrains Mono', monospace; */
 	font-size: 13px;
 }
 
@@ -174,7 +172,6 @@ a,
 .cm-formatting-link {
 	color: var(--text-a) !important;
 	text-decoration: none !important;
-	font-family: var(--font-family-editor) !important;
 }
 
 /* link hover color */
@@ -317,13 +314,7 @@ table tr:nth-child(even) {
 	line-height: normal;
 }
 
-/* font for everything outside of editor/preview panes */
-.app-container {
-	font-family: var(--font-family-preview);
-}
-
 .status-bar-item {
-	font-family: var(--font-family-preview);
 	font-size: 12px;
 }
 
@@ -333,24 +324,25 @@ table tr:nth-child(even) {
 
 /* normal text outside of headings and code */
 .cm-s-obsidian {
-	font-family: var(--font-family-editor);
 	font-size: 15px;
 	color: var(--text);
 	padding-left: 10% !important;
 	padding-right: 10% !important;
+	background-color: var(--bg-light-accent) !important;
 }
 
 .mod-single-child .cm-s-obsidian {
-	font-family: var(--font-family-editor);
 	font-size: 15px;
 	color: var(--text);
 	padding-left: 20% !important;
 	padding-right: 20% !important;
 }
+.workspace-leaf {
+	background-color: var(--bg) !important;
+}
 
 /* headings */
 .cm-header-1 {
-	font-family: var(--font-family-editor);
 	font-weight: 500;
 	font-size: 28px;
 	font-weight: bold;
@@ -358,7 +350,6 @@ table tr:nth-child(even) {
 }
 
 .cm-header-2 {
-	font-family: var(--font-family-editor);
 	font-weight: 500;
 	font-size: 26px;
 	font-weight: bold;
@@ -366,7 +357,6 @@ table tr:nth-child(even) {
 }
 
 .cm-header-3 {
-	font-family: var(--font-family-editor);
 	font-weight: 500;
 	font-size: 22px;
 	font-weight: bold;
@@ -374,7 +364,6 @@ table tr:nth-child(even) {
 }
 
 .cm-header-4 {
-	font-family: var(--font-family-editor);
 	font-weight: 500;
 	font-size: 20px;
 	font-weight: bold;
@@ -382,7 +371,6 @@ table tr:nth-child(even) {
 }
 
 .cm-header-5 {
-	font-family: var(--font-family-editor);
 	font-weight: 500;
 	font-size: 18px;
 	font-weight: bold;
@@ -390,7 +378,6 @@ table tr:nth-child(even) {
 }
 
 .cm-header-6 {
-	font-family: var(--font-family-editor);
 	font-weight: 500;
 	font-size: 16px;
 	font-weight: bold;
@@ -403,7 +390,6 @@ table tr:nth-child(even) {
 
 /* normal text outside of headings and code */
 .markdown-preview-view {
-	font-family: var(--font-family-preview);
 	font-size: 15px;
 	color: var(--text);
 	padding-left: 10% !important;
@@ -411,7 +397,6 @@ table tr:nth-child(even) {
 }
 
 .mod-single-child .markdown-preview-view {
-	font-family: var(--font-family-preview);
 	font-size: 15px;
 	color: var(--text);
 	padding-left: 20% !important;
@@ -420,7 +405,6 @@ table tr:nth-child(even) {
 
 /* headings */
 .markdown-preview-view h1 {
-	font-family: var(--font-family-preview);
 	font-weight: 500;
 	font-size: 28px;
 	font-weight: bold;
@@ -428,7 +412,6 @@ table tr:nth-child(even) {
 }
 
 .markdown-preview-view h2 {
-	font-family: var(--font-family-preview);
 	font-weight: 500;
 	font-size: 26px;
 	font-weight: bold;
@@ -436,7 +419,6 @@ table tr:nth-child(even) {
 }
 
 .markdown-preview-view h3 {
-	font-family: var(--font-family-preview);
 	font-weight: 500;
 	font-size: 22px;
 	font-weight: bold;
@@ -444,7 +426,6 @@ table tr:nth-child(even) {
 }
 
 .markdown-preview-view h4 {
-	font-family: var(--font-family-preview);
 	font-weight: 500;
 	font-size: 20px;
 	font-weight: bold;
@@ -452,7 +433,6 @@ table tr:nth-child(even) {
 }
 
 .markdown-preview-view h5 {
-	font-family: var(--font-family-preview);
 	font-weight: 500;
 	font-size: 18px;
 	font-weight: bold;
@@ -460,11 +440,10 @@ table tr:nth-child(even) {
 }
 
 .markdown-preview-view h6 {
-	font-family: var(--font-family-preview);
 	font-weight: 500;
 	font-size: 16px;
 	font-weight: bold;
-	color: var(--h5);
+	color: var(--h6);
 }
 
 
